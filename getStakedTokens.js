@@ -18,7 +18,7 @@ ssc.find('tokens', 'balances', { symbol: 'RHB' }, 1000, 0, [], (err, result) => 
     }
   });
   uniqueAuthor.forEach((data) => {
-    data.amountToSend = ((data.amountToSend * 100000) / totalStake).toString();
+    data.amountToSend = ((data.amountToSend * 100000) / totalStake).toFixed(2).toString();
   })
   fs.writeFile('ToSend.txt', JSON.stringify(uniqueAuthor), (err) => {
     if (err) throw err;
