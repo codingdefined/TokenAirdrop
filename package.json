@@ -16,6 +16,7 @@
   "dependencies": {
     "dsteem": "^0.10.1",
     "forever": "^0.15.3",
+    "node-cron": "^2.0.3",
     "sscjs": "0.0.8",
     "steem": "^0.7.2"
   }
