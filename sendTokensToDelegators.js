@@ -100,9 +100,9 @@ function send(result){
         var sendJSON = {"contractName":"tokens","contractAction":config.mode.toLowerCase() ,"contractPayload":{"symbol": config.tokenSymbol,"to": element.delegator,"quantity": element.AmountToSend,"memo":"Test"}}
         await steem.broadcast.customJson(config.accountPrivateActiveKey, [config.accountName], null, "ssc-mainnet1", JSON.stringify(sendJSON), function(err, result) {
             if (!err){
-                console.log(`Sent ${element.amountToSend} to ${element.author}.`)
+                console.log(`Sent ${element.delegator} to ${element.delegator}.`)
             } else {
-                console.log(`Error sending ${element.amountToSend} to ${element.author}.`)
+                console.log(`Error sending ${element.AmountToSend} to ${element.delegator}.`)
             }
         });
         console.log(sendJSON);
